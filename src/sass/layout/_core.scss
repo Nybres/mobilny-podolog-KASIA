@@ -1,0 +1,5 @@
+@use "../utilities/index" as *;
+
+p {
+  @include heading1();
+}
