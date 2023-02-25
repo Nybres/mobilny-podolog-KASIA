@@ -14,6 +14,16 @@
       gap: 24px;
     }
 
+    img {
+      width: 100px;
+      @include sm {
+        width: 110px;
+      }
+      @include lg {
+        width: 115px;
+      }
+    }
+
     &-name {
       display: none;
       @include heading5();
@@ -71,6 +81,8 @@
     right: 0;
     bottom: 0;
     padding: 42px 24px;
+    background-color: var(--white-color);
+    z-index: 99;
     transform: translateX(-100%);
     transition: transform cubic-bezier(0.23, 1, 0.32, 1) 0.3s;
 
@@ -133,6 +145,17 @@
       }
     }
 
+    &-chevron {
+      display: none;
+      @include lg {
+        display: block;
+        transition: transform 0.3s ease;
+        &--active {
+          transform: rotateX(180deg);
+        }
+      }
+    }
+
     @include lg {
       flex-direction: row;
     }
@@ -147,10 +170,12 @@
     padding: 42px 24px;
     background-color: var(--white-color);
     z-index: 99;
+    opacity: 0;
     transform: translateX(200%);
-    transition: transform cubic-bezier(0.23, 1, 0.32, 1) 0.3s;
+    transition: transform cubic-bezier(0.23, 1, 0.32, 1) 0.3s, opacity 0.3s ease;
 
     &--active {
+      opacity: 1;
       transform: translate(0%);
     }
 
@@ -331,13 +356,24 @@
 
 .btn {
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 24px;
   color: var(--black-color);
   border-radius: 6px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 34px;
+  height: 56px;
 
   &--primary {
     background-color: var(--primary-color);
     color: var(--white-color);
+  }
+  &--secondary {
+    border: 2px solid var(--primary-color);
+    color: var(--lighter-black-color);
   }
 }
 
@@ -368,5 +404,25 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+}
+
+.heading {
+  position: relative;
+  // overflow: hidden;
+  @include heading3();
+  color: var(--lighter-black-color);
+  margin-bottom: 34px;
+  z-index: 10;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -16px;
+    height: 42px;
+    width: 54px;
+    z-index: -10;
+    background-color: var(--secondary-color);
   }
 }

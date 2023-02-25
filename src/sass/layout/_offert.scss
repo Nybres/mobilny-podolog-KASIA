@@ -1,0 +1,7 @@
+@use "../utilities/index" as *;
+
+.offert {
+  position: relative;
+  background-color: var(--special-color);
+  padding: var(--sm);
+}

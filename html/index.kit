@@ -28,135 +28,112 @@
 </head>
 
 <body>
-    <nav class="navigation">
+    <!-- @include 'nav.kit' -->
+    <header class="header">
+        <div class="header__dots">
+        </div>
         <div class="container">
-            <div class="navigation__row">
-                <div class="navigation__logo">
-                    <img src="./src/img/logo.png" alt="">
-                    <span class="navigation__logo-name">Mobilny podolog</span>
-                </div>
-                <div class="navigation__submenuback">
-                    <svg class="navigation__submenuback-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 24 24" fill="none" stroke="#404040" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-arrow-right">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </div>
-                <div class="navigation__menu">
-                    <ul class="navigation__nav">
-                        <li class="navigation__nav-item">
-                            <div class="navigation__nav-arrow-box">
-                                <p class="navigation__nav-link navigation__nav-link--special">Usługi</p>
-                                <svg class="navigation__nav-arrow" xmlns="http://www.w3.org/2000/svg" width="32"
-                                    height="32" viewBox="0 0 24 24" fill="none" stroke="#404040" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
+            <div class="row f-cr f-md-r">
+                <div class="col-12 col-md-7 col-lg-8">
+                    <div class="header__left">
+                        <div class="header__content">
+                            <h1 class="header__content-title">Mobilny Podolog</h1>
+                            <p class="header__content-subtitle">Usługi podologiczne na terenie Piły</p>
+                            <p class="header__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                                aliquam, purus sit amet luctus venenatis. Consectetur adipiscing elit ut aliquam</p>
+                            <div class="header__content-btns">
+                                <a href="#" class="btn btn--primary">Skontaktuj się</a>
+                                <a href="#" class="btn btn--secondary">Poznaj ofertę</a>
                             </div>
-                        </li>
-                        <li class="navigation__nav-item">
-                            <a href="#" class="navigation__nav-link">
-                                O nas
-                            </a>
-                        </li>
-                        <li class="navigation__nav-item">
-                            <a href="#" class="navigation__nav-link">
-                                Cennik
-                            </a>
-                        </li>
-                        <li class="navigation__nav-item">
-                            <a href="#" class="navigation__nav-link">
-                                Kontakt
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navigation__submenu">
-                    <div class="navigation__submenu-inner container">
-                        <p class="navigation__submenu-title">Usługi</p>
-                        <ul class="navigation__submenu-nav">
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Wrastający paznokieć</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Pękające pięty</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Usunięcie brodawki</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Pękające pięty</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Usunięcie brodawki</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Wrastający paznokieć</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Usunięcie brodawki</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Pękające pięty</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Pękające pięty</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                            <li class="navigation__submenu-item">
-                                <a class="navigation__submenu-link" href="#">Usunięcie brodawki</a>
-                                <p class="navigation__submenu-text">It is a long established fact that a reader will be
-                                    distracted by the readable
-                                    content of a page when looking at its layout.</p>
-                            </li>
-                        </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="navigation__cta">
-                    <a class="btn btn--primary" href="#">
-                        Skontaktuj się
-                    </a>
-                </div>
-                <div class="hamburger">
-                    <div class="hamburger__inner">
-                        <span class="hamburger__line hamburger__line-one"></span>
-                        <span class="hamburger__line hamburger__line-two"></span>
-                        <span class="hamburger__line hamburger__line-three"></span>
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="header__right">
+                        <img loading="lazy" width="480" height="480" src="/dist/img/strona_glowna/header_image.png"
+                            alt="">
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
-    <!-- <header></header> -->
-    <!-- <main></main> -->
+    </header>
+    <main>
+        <section class="care">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="care__left">
+                            <img loading="lazy" width="500" height="600"
+                                src="./dist/img/strona_glowna/zadbajmy_o_twoje_stopy.jpg" alt="">
+                            <div class="care__content">
+                                <h2 class="heading">Zadbajmy o twoje stopy</h2>
+                                <p class="care__content-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris, donec eleifend
+                                    nisi, ipsum nibh sagittis nisi. Erat varius ultrices ut nulla tellus egestas. Lorem
+                                    id justo morbi curabitur egestas facilisi pulvinar quam.
+                                </p>
+                                <a class="btn btn--primary" href="#">Poznaj nas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="care__right">
+                            <div class="care__row">
+                                <div class="care__row-item">
+                                    <img width="42" height="42" loading="lazy" src="/dist/img/svg/dojazd_do_klienta.svg"
+                                        alt="">
+                                </div>
+                                <h3 class="care__row-title">Dojazd do klienta</h3>
+                            </div>
+                            <div class="care__row">
+                                <div class="care__row-item">
+                                    <img width="42" height="42" loading="lazy"
+                                        src="/dist/img/svg/szeroki_zakres_uslug.svg" alt="">
+                                </div>
+                                <h3 class="care__row-title">Szeroki zakres usług</h3>
+                            </div>
+                            <div class="care__row">
+                                <div class="care__row-item">
+                                    <img width="42" height="42" loading="lazy"
+                                        src="/dist/img/svg//doswiadczona_kadra.svg" alt="">
+                                </div>
+                                <h3 class="care__row-title">Doświadczona kadra</h3>
+                            </div>
+                            <div class="care__row">
+                                <div class="care__row-item">
+                                    <img width="42" height="42" loading="lazy" src="/dist/img/svg/nowoczesny_sprzet.svg"
+                                        alt="">
+                                </div>
+                                <h3 class="care__row-title">Nowoczesny sprzęt</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offert">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="offert__left"></div>
+                    </div>
+                    <div class="col-12">
+                        <div class="offert__right">
+                            <div class="offert__content">
+                                <h2 class="heading">Nasze usługi</h2>
+                                <div class="offert__content-list">
+                                    <div>fsafa</div>
+                                    <div>fsafa</div>
+                                    <div>fsafa</div>
+                                </div>
+                                <a class="btn btn--secondary" href="#">Poznaj ofertę</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- <footer></footer> -->
     <div class="overlay"></div>
     <script src="./dist/js/main.min.js"></script>

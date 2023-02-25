@@ -1,0 +1,153 @@
+@use "../utilities/index" as *;
+
+.header {
+  position: relative;
+  &__dots {
+    position: absolute;
+    bottom: 400px;
+    right: 0;
+    top: 0;
+    background-image: url(/dist/img/svg/kropki.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    z-index: -10;
+    @include md {
+      bottom: 0;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    padding: 90px 0px 45px 0px;
+
+    &::after {
+      content: "";
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      //   max-width: 700px;
+      background-color: var(--secondary-color);
+      position: absolute;
+      z-index: -10;
+    }
+
+    @include sm {
+      padding: 90px 0px 58px 0px;
+    }
+    @include md {
+      padding: 100px 0px;
+    }
+    @include lg {
+      padding: 125px 16px;
+    }
+    @include xl {
+      padding: 170px 0px;
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 165px;
+    @include sm {
+      height: 180px;
+    }
+    @include md {
+      height: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 12px;
+      width: 230px;
+      @include sm {
+        width: 240px;
+      }
+      @include md {
+        width: 100%;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+      }
+      @include lg {
+        right: 16px;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 600px;
+    &-title {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 48px;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      @include sm {
+        @include heading2();
+      }
+      @include xl {
+        @include heading1();
+      }
+    }
+    &-subtitle {
+      font-size: 26px;
+      line-height: 36px;
+      font-weight: 600;
+      color: var(--lighter-black-color);
+      margin-bottom: 18px;
+      @include sm {
+        @include heading3();
+      }
+      @include xl {
+        margin-bottom: 28px;
+      }
+    }
+    &-text {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--black-color);
+      margin-bottom: 32px;
+      @include sm {
+        @include bodyXl();
+      }
+    }
+
+    &-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      @include sm {
+        flex-direction: row;
+        gap: 24px;
+      }
+    }
+  }
+
+  @include xl {
+    &::after {
+      content: "";
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      min-width: 700px;
+      max-width: 55%;
+      background-color: var(--secondary-color);
+      position: absolute;
+      z-index: -10;
+    }
+  }
+  @include xxl {
+    &::after {
+      min-width: 1024px;
+    }
+  }
+}

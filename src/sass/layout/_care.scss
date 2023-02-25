@@ -1,0 +1,68 @@
+@use "../utilities/index" as *;
+.care {
+  position: relative;
+  padding: var(--sm);
+
+  &__left {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 42px;
+
+    img {
+      box-shadow: 1px 1px 24px rgb(0 0 0 / 5%);
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  &__right {
+    padding: 42px 0px 0px 0px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+
+      img {
+        width: 42px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 76px;
+        height: 76px;
+        border: 6px solid var(--lighter-secondary-color);
+        border-radius: 50%;
+      }
+    }
+
+    &-title {
+      @include heading4();
+      color: var(--lighter-black-color);
+    }
+  }
+
+  &__content {
+    background-color: var(--white-color);
+
+    &-text {
+      @include bodyL();
+      color: var(--black-color);
+      margin-bottom: 24px;
+    }
+  }
+}
