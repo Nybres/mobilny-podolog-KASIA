@@ -355,6 +355,7 @@
 }
 
 .btn {
+  position: relative;
   border: none;
   display: flex;
   align-items: center;
@@ -366,14 +367,39 @@
   font-size: 18px;
   line-height: 34px;
   height: 56px;
+  overflow: hidden;
+  z-index: 1;
 
   &--primary {
     background-color: var(--primary-color);
     color: var(--white-color);
+    transition: background-color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: var(--lighter-black-color);
+      transition: width 0.3s ease-out;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
   &--secondary {
     border: 2px solid var(--primary-color);
     color: var(--lighter-black-color);
+    transition: background-color 0.3s ease-out, color 0.3s ease-in;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
   }
 }
 
