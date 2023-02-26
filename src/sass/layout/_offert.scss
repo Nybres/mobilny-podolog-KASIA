@@ -4,4 +4,69 @@
   position: relative;
   background-color: var(--special-color);
   padding: var(--sm);
+
+  &__left {
+    &-btn {
+      margin-top: 32px;
+      @include md {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 310px;
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+      @include sm {
+        flex-direction: row;
+        gap: 24px;
+      }
+      @include md {
+        flex-direction: column;
+      }
+    }
+    &-row {
+      display: flex;
+      gap: 12px;
+      svg {
+        margin-top: 8px;
+        @include md {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      @include sm {
+        flex-direction: column;
+      }
+      @include md {
+        flex-direction: row;
+      }
+    }
+    &-paragraph {
+      @include bodyL();
+    }
+    @include sm {
+      max-width: unset;
+    }
+  }
+
+  &__btn {
+    display: none;
+    @include md {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @include md {
+    padding: var(--md);
+  }
+  @include lg {
+    padding: var(--lg);
+  }
 }
