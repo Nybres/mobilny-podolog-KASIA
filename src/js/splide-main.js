@@ -18,11 +18,26 @@ document.addEventListener("DOMContentLoaded", function () {
         perPage: 2,
       },
       768: {
-        width: "400px",
+        width: "520px",
         perPage: 1,
         gap: 24,
         padding: {
-          right: "94px",
+          right: "46px",
+        },
+      },
+      992: {
+        width: "unset",
+        perPage: 2,
+        gap: 24,
+        padding: {
+          right: "42px",
+        },
+      },
+      1200: {
+        perPage: 3,
+        gap: 24,
+        padding: {
+          right: "0px",
         },
       },
     },

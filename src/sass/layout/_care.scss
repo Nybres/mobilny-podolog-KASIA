@@ -130,6 +130,15 @@
       transform: translate(130px, -50%);
     }
   }
+
+  &-btn {
+    @include xl {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 32px;
+    }
+  }
   @include md {
     padding: var(--md);
   }

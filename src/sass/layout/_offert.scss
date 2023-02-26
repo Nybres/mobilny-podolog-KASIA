@@ -24,9 +24,11 @@
       @include sm {
         flex-direction: row;
         gap: 24px;
+        margin-bottom: 46px;
       }
       @include md {
         flex-direction: column;
+        margin-bottom: 32px;
       }
     }
     &-row {
@@ -52,6 +54,9 @@
     }
     @include sm {
       max-width: unset;
+    }
+    @include md {
+      max-width: 310px;
     }
   }
 

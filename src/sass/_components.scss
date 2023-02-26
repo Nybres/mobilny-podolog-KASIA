@@ -52,11 +52,15 @@
     border-radius: 50%;
     background-color: rgba(94, 140, 165, 0.5);
     border: none;
+    cursor: pointer;
   }
 
   &__page.is-active {
     width: 16px;
     height: 16px;
     background-color: var(--primary-color);
+  }
+  @include xl {
+    max-width: 310px;
   }
 }

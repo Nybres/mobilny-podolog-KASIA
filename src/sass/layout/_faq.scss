@@ -1,0 +1,13 @@
+@use "../utilities/index" as *;
+
+.faq {
+  position: relative;
+  padding: var(--sm);
+
+  @include md {
+    padding: var(--md);
+  }
+  @include lg {
+    padding: var(--lg);
+  }
+}

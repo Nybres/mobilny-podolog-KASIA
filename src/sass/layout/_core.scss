@@ -452,3 +452,49 @@
     background-color: var(--secondary-color);
   }
 }
+
+.cta {
+  padding: 54px 0px;
+  background-color: var(--special-color);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    &-heading {
+      @include heading4();
+      text-align: center;
+      color: var(--lighter-black-color);
+
+      @media (min-width: 380px) {
+        @include heading3();
+      }
+      @include md {
+        @include heading2();
+      }
+      @include lg {
+        @include heading1();
+      }
+    }
+
+    @include md {
+      gap: 42px;
+    }
+    @include lg {
+      gap: 56px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include md {
+    padding: 66px 0px;
+  }
+  @include lg {
+    padding: 88px 0px;
+  }
+}

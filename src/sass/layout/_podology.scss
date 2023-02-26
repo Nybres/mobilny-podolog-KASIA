@@ -1,0 +1,78 @@
+@use "../utilities/index" as *;
+
+.podology {
+  position: relative;
+  padding: var(--sm);
+
+  &__content {
+    &-text {
+      @include bodyM();
+      color: var(--black-color);
+      margin-bottom: 24px;
+      @include sm {
+        margin-bottom: 32px;
+      }
+      @include lg{
+        margin-bottom: 42px;
+      }
+    }
+
+    &-color {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    &-row {
+      display: flex;
+      gap: 12px;
+
+      svg {
+        margin-top: 8px;
+        @include sm {
+          width: 24px;
+        }
+      }
+    }
+
+    &-item {
+      @include bodyL();
+    }
+
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__left{
+    @include lg{
+        max-width: 650px;
+    }
+  }
+
+  &__right {
+    margin-top: 32px;
+
+    img {
+      margin: 0 auto;
+    }
+
+    @include md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 42px;
+    }
+  }
+
+  @include md {
+    padding: var(--md);
+  }
+  @include lg {
+    padding: var(--lg);
+  }
+}
