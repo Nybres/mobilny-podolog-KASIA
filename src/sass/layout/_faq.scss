@@ -4,6 +4,91 @@
   position: relative;
   padding: var(--sm);
 
+  &__left {
+    margin-top: 48px;
+    &-text {
+      color: var(--lighter-black-color);
+      @include heading4();
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__box {
+    border-bottom: 1px solid var(--grey-color);
+    transition: background-color 0.3s ease-in-out, border-color 0.9s ease-in-out;
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      padding: 6px;
+      margin-left: 12px;
+      svg {
+        transition: transform 0.3s ease-out;
+      }
+    }
+    &-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 18px 24px 0px;
+      cursor: pointer;
+
+      &--active svg {
+        transform: rotate(45deg);
+      }
+    }
+    &-title {
+      @include heading5();
+      color: var(--lighter-black-color);
+    }
+    &-answer {
+      max-height: 0px;
+      @include bodyL();
+      color: var(--black-color);
+      transition: max-height 0.6s ease-out;
+      padding: 0px 24px 24px;
+
+      &-text {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+      }
+
+      &--active {
+        max-height: 450px;
+        transition: max-height 0.4s ease-in;
+      }
+      &--active &-text {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+      }
+    }
+
+    &--active {
+      border-color: transparent;
+      background-color: var(--special-color);
+      transition: border-color 0.2s ease-in;
+    }
+  }
+
   @include md {
     padding: var(--md);
   }
