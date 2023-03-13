@@ -48,44 +48,57 @@
 
   &__row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 24px;
+
+    &-description {
+      @include bodyS();
+      color: var(--black-color);
+    }
 
     &-item {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 14px;
-
-      img {
-        width: 42px;
-      }
+      margin-top: 8px;
+      width: 58px;
 
       &::after {
         content: "";
         position: absolute;
-        width: 76px;
-        height: 76px;
-        border: 6px solid var(--lighter-secondary-color);
+        width: 44px;
+        height: 44px;
+        border: 3px solid var(--lighter-secondary-color);
         border-radius: 50%;
+
+        @include sm {
+          width: 54px;
+          height: 54px;
+          border: 4px solid var(--lighter-secondary-color);
+        }
       }
 
       @include sm {
-        height: 84px;
-        padding: 24px;
+        height: 42px;
+        // padding: 12px;
       }
     }
 
     &-title {
-      @include heading4();
+      @include heading5();
       color: var(--lighter-black-color);
+      margin-bottom: 8px;
+
+      @include lg {
+        @include heading4();
+      }
     }
 
     @include sm {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       flex-direction: column;
       width: calc(50% - 16px);
@@ -93,6 +106,9 @@
     @include lg {
       flex-direction: row;
       width: unset;
+    }
+    @include xl {
+      gap: 36px;
     }
   }
 
