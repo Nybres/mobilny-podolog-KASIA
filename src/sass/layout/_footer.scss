@@ -1,0 +1,27 @@
+@use "../utilities/index" as *;
+
+.footer {
+  position: relative;
+  background-color: #1d1d1d;
+  padding: var(--sm);
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%, -8px);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--lighter-black-color);
+    }
+  }
+}

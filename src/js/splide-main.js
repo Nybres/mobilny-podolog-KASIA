@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var splide = new Splide(".offert-slider", {
+  var offert = new Splide(".offert-slider", {
     classes: {
       pagination: "splide__pagination card__pagination",
       page: "splide__pagination__page card__page",
@@ -42,5 +42,41 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-  splide.mount();
+  offert.mount();
+
+  var testimonials = new Splide(".testimonials-slider", {
+    classes: {
+      pagination: "splide__pagination testimonials__pagination",
+      page: "splide__pagination__page testimonials__page",
+    },
+    type: "loop",
+    perPage: 1,
+    gap: 16,
+    padding: {
+      right: "32px",
+    },
+    arrows: false,
+    // start: 2,
+    mediaQuery: "min",
+    breakpoints: {
+      576: {
+        perPage: 2,
+      },
+      992: {
+        perPage: 3,
+        gap: 36,
+        padding: {
+          right: "0px",
+        },
+      },
+      // 1200: {
+      //   perPage: 3,
+      //   gap: 24,
+      //   padding: {
+      //     right: "0px",
+      //   },
+      // },
+    },
+  });
+  testimonials.mount();
 });

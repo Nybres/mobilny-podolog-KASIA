@@ -1,0 +1,86 @@
+@use "../utilities/index" as *;
+
+.testimonials {
+  position: relative;
+  background-color: var(--special-color);
+  padding: var(--sm);
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__inner {
+    margin-top: 24px;
+  }
+
+  &__card {
+    background-color: var(--white-color);
+    border-radius: 16px;
+    height: 100%;
+
+    &-inner {
+      padding: 34px 18px;
+    }
+
+    &-head {
+      position: relative;
+      margin-bottom: 24px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translate(0px, -50%);
+        right: 0;
+        width: 85%;
+        height: 2px;
+        background-color: var(--secondary-color);
+      }
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &-title {
+      @include heading4();
+      color: var(--lighter-black-color);
+    }
+
+    &-description {
+      @include bodyM();
+      color: var(--grey-text-color);
+    }
+  }
+
+  &__pagination {
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  &__page {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgba(94, 140, 165, 0.5);
+    border: none;
+    cursor: pointer;
+  }
+
+  &__page.is-active {
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+  }
+
+  @include md {
+    padding: var(--md);
+  }
+  @include lg {
+    padding: var(--lg);
+  }
+}

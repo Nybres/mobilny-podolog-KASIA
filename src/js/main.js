@@ -130,3 +130,12 @@ faqContainer.addEventListener("click", e => {
   boxQuestion.classList.toggle("faq__box-question--active");
   boxAnswer.classList.toggle("faq__box-answer--active");
 });
+
+//scroll
+const scrollArrow = document.querySelector(".js-scroll");
+
+const scrollUp = params => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+scrollArrow.addEventListener("click", scrollUp);
