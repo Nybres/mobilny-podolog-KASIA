@@ -4,6 +4,12 @@
   position: relative;
   background-color: #1d1d1d;
   padding: var(--sm);
+  @include md {
+    padding: var(--md);
+  }
+  @include lg {
+    padding: var(--lg);
+  }
 
   &__arrow {
     display: flex;
@@ -22,6 +28,88 @@
 
     &:hover {
       background-color: var(--lighter-black-color);
+    }
+  }
+
+  &__column {
+    &-name {
+      @include heading4();
+      color: var(--white-color);
+      margin-bottom: 18px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin-bottom: 32px;
+
+    &-link {
+      @include bodyM();
+      text-decoration: none;
+      color: var(--grey-color);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__socials {
+    margin-bottom: 48px;
+    &-number {
+      @include heading5();
+      color: var(--grey-color);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+    &-boxes {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    &-box {
+      background-color: var(--white-color);
+      border-radius: 6px;
+      width: 42px;
+      height: 42px;
+      transition: transform 0.3s ease-in-out;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__description {
+    padding: 34px 0 0 0;
+    border-top: 1px solid var(--grey-color);
+    p {
+      @include bodyM();
+      color: var(--grey-color);
+      margin-top: 34px;
+    }
+
+    @include lg {
+      padding: 0 0 0 34px;
+      border-top: unset;
+      border-left: 1px solid var(--grey-color);
     }
   }
 }

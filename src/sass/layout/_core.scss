@@ -5,6 +5,11 @@
   align-items: center;
   height: 90px;
   border-bottom: 1px solid var(--grey-color);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+
   &__logo {
     display: flex;
     align-items: center;

@@ -12,7 +12,7 @@
       @include sm {
         margin-bottom: 32px;
       }
-      @include lg{
+      @include lg {
         margin-bottom: 42px;
       }
     }
@@ -40,6 +40,7 @@
     }
 
     &-item {
+      width: calc(100% - 24px);
       @include bodyL();
     }
 
@@ -48,9 +49,9 @@
     }
   }
 
-  &__left{
-    @include lg{
-        max-width: 650px;
+  &__left {
+    @include lg {
+      max-width: 650px;
     }
   }
 
