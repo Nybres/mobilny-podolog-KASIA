@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilny Podolog - Piła</title>
+    <link rel="stylesheet" href="./dist/css/helpers.min.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <style>
+        @font-face {
+            font-family: "Helvatica";
+            font-display: swap;
+            src: url("./src/fonts/Helvetica.ttf") format("ttf");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Helvatica";
+            font-display: swap;
+            src: url("./src/fonts/Helvetica-Bold.ttf") format("ttf");
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- @include 'nav.kit' -->
+    <header class="about__header">
+        <div class="container">
+            <div class="about__header-content">
+                <h1 class="about__header-name">O nas</h1>
+                <ul class="about__header-menu">
+                    <li class="about__header-item">
+                        <a href="../index.html" class="about__header-link">Strona główna</a>
+                    </li>
+                    <svg width="14" height="14" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.34371 9.16671L2.60413 8.42712L6.03121 5.00004L2.60413 1.57296L3.34371 0.833374L7.51038 5.00004L3.34371 9.16671Z"
+                            fill="#5E8CA5" />
+                    </svg>
+                    <li class="about__header-item">
+                        <p class="about__header-link">O nas</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="who">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="who__box">
+                            <h2 class="who__box-title">
+                                Kim jesteśmy
+                            </h2>
+                            <p class="who__box-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris, donec eleifend nisi,
+                                ipsum
+                                nibh sagittis nisi. Erat varius ultrices ut nulla tellus egestas. Lorem id justo morbi
+                                curabitur egestas facilisi pulvinar quam.
+                                <br />
+                                <br />
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa dignissim nunc cursus sed
+                                quam viverra. Blandit odio risus ornare vel adipiscing volutpat. Tincidunt ut integer
+                                sit
+                                ac. Mauris egestas dolor praesent tempor neque et integer rhoncus. Dignissim integer
+                                augue
+                                eget arcu, dictum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="who__image">
+                        <img loading="lazy" src="../dist/img/o_nas/kim_jestesmy.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="test"></section>
+    </main>
+    <!-- @include 'footer.kit' -->
+    <div class="overlay"></div>
+    <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>

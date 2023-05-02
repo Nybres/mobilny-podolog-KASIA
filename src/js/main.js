@@ -121,15 +121,17 @@ if (window.innerWidth > 992) {
 
 //faq
 const faqContainer = document.querySelector(".faq__container");
-faqContainer.addEventListener("click", e => {
-  const box = e.target.closest(".faq__box");
-  const boxQuestion = box.querySelector(".faq__box-question");
-  const boxAnswer = box.querySelector(".faq__box-answer");
+if (faqContainer) {
+  faqContainer.addEventListener("click", e => {
+    const box = e.target.closest(".faq__box");
+    const boxQuestion = box.querySelector(".faq__box-question");
+    const boxAnswer = box.querySelector(".faq__box-answer");
 
-  box.classList.toggle("faq__box--active");
-  boxQuestion.classList.toggle("faq__box-question--active");
-  boxAnswer.classList.toggle("faq__box-answer--active");
-});
+    box.classList.toggle("faq__box--active");
+    boxQuestion.classList.toggle("faq__box-question--active");
+    boxAnswer.classList.toggle("faq__box-answer--active");
+  });
+}
 
 //scroll
 const scrollArrow = document.querySelector(".js-scroll");
