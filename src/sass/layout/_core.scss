@@ -58,6 +58,10 @@
     left: 16px;
     transform: translate(-120%);
     transition: transform cubic-bezier(0.23, 1, 0.32, 1) 0.3s;
+    @include lg {
+      opacity: 0;
+      visibility: hidden;
+    }
 
     &-arrow {
       transform: rotate(180deg);
@@ -176,7 +180,7 @@
     background-color: var(--white-color);
     z-index: 99;
     opacity: 0;
-    transform: translateX(200%);
+    transform: translateX(-200%);
     transition: transform cubic-bezier(0.23, 1, 0.32, 1) 0.3s, opacity 0.3s ease;
 
     &--active {
@@ -221,6 +225,7 @@
 
     &-item {
       position: relative;
+      padding: 4px 0;
       @include lg {
         display: flex;
         flex-direction: column;

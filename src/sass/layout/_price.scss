@@ -1,7 +1,7 @@
 @use "../utilities/index" as *;
 .prices {
   position: relative;
-  padding: var(--sm);
+  padding: 66px 0 0 0;
 
   &__title {
     display: flex;
@@ -71,6 +71,10 @@
       @include heading6();
       background-color: var(--primary-color);
       color: white;
+
+      div {
+        padding-right: 24px;
+      }
     }
     &--offert {
       background-color: #f5f5f5;
@@ -93,9 +97,9 @@
   }
 
   @include md {
-    padding: var(--md);
+    padding: 86px 0 0 0;
   }
   @include lg {
-    padding: var(--lg);
+    padding: 106px 0 0 0;
   }
 }
