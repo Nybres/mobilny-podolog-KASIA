@@ -462,6 +462,10 @@
   padding: 54px 0px;
   background-color: var(--special-color);
 
+  &--colored {
+    background-color: rgba(224, 217, 214, 0.5);
+  }
+
   &__content {
     display: flex;
     flex-direction: column;

@@ -42,6 +42,12 @@
     align-items: flex-start;
     padding: 80px 0 40px 0;
     height: 100%;
+    @include md {
+      padding: 80px 0 80px 0;
+    }
+    @include xl {
+      padding: 100px 0;
+    }
 
     &::after {
       content: "";
@@ -50,9 +56,13 @@
       top: 0;
       left: -16px;
       right: -16px;
-      //   left: calc(-100% / 2);
       height: 100%;
       z-index: -1;
+
+      @include xl {
+        // left: calc(-100% / 2);
+        left: -100%;
+      }
     }
     &-title {
       @include heading3();
@@ -64,22 +74,160 @@
       @include bodyL();
       color: #fcfcfc;
       max-width: 480px;
+
+      @include md {
+        max-width: 380px;
+      }
+      @include lg {
+        max-width: 480px;
+      }
     }
   }
 
   &__image {
     font-size: 0;
+    margin: 0 -16px 0 -16px;
+
+    @media (min-width: 720px) {
+      margin: 0;
+      text-align: center;
+    }
+
     @include md {
       position: absolute;
       top: 50%;
       transform: translate(0px, -50%);
-      right: calc(calc(100% - 1360px) / 2);
-      box-shadow: 1px 1px 34px rgba(64, 64, 64, 0.5);
+      right: 16px;
+      z-index: 0;
+      width: 100%;
+      box-shadow: 1px 1px 12px rgba(64, 64, 64, 0.2);
     }
   }
 }
 
-.test {
-  background-color: #5e8ca5;
-  padding: 120px 0;
+.counter {
+  overflow: hidden;
+  &__container {
+    max-width: 500px;
+    margin: 42px auto;
+
+    @include xl {
+      max-width: 660px;
+      margin: 94px 0;
+    }
+  }
+  &__title {
+    @include heading4();
+    color: var(--lighter-black-color);
+    margin-bottom: 34px;
+
+    @include xl {
+      @include heading3();
+    }
+  }
+
+  &__boxes {
+    &-box {
+      position: relative;
+      background-color: var(--special-color);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 24px;
+
+      @include md {
+        padding: 24px;
+      }
+
+      img {
+        margin-bottom: 4px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background-color: var(--secondary-color);
+      }
+    }
+    &-counter {
+      @include heading3();
+      color: #1d1d1d;
+    }
+    &-description {
+      @include bodyS();
+      color: var(--black-color);
+      text-align: center;
+      @include xl {
+        @include bodyM();
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    font-size: 0;
+    height: 400px;
+    text-align: center;
+    @include md {
+      height: 100%;
+    }
+
+    img {
+      height: 400px;
+      object-fit: contain;
+
+      @include md {
+        height: 100%;
+      }
+
+      @include xl {
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: -60px;
+        transform: translate(0px, -50%);
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -16px;
+      right: -16px;
+      bottom: 0;
+      background-color: var(--primary-color);
+      z-index: -1;
+
+      @include xl {
+        right: calc(-100% - 80px);
+      }
+    }
+  }
+}
+
+.benefits {
+  position: relative;
+  background-color: var(--special-color);
+  padding: var(--sm);
+
+  &__container {
+    margin-top: 24px;
+  }
+
+  .col-12 {
+    margin-bottom: 24px;
+  }
+  @include md {
+    padding: var(--md);
+  }
+  @include lg {
+    padding: var(--lg);
+  }
 }
