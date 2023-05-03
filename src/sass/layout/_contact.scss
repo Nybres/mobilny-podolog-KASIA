@@ -1,0 +1,128 @@
+@use "../utilities/index" as *;
+
+.contact {
+  position: relative;
+  padding: 32px 0 0 0;
+  @include md {
+    padding: 48px 0;
+  }
+  @include xl {
+    padding: 64px 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: var(--primary-color);
+    z-index: -1;
+  }
+  &__container {
+    padding: 42px 16px;
+    background-color: var(--special-color);
+    @include md {
+      padding: 42px 32px;
+    }
+    @include xl {
+      padding: 42px 64px;
+    }
+  }
+
+  &__heading {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 18px;
+    &-description {
+      @include bodyM();
+      color: var(--black-color);
+    }
+    .heading {
+      margin-bottom: 14px !important;
+    }
+  }
+
+  &__data {
+    @include heading4();
+    color: var(--primary-color);
+    margin: 32px 0 18px 0;
+    @include md {
+      @include heading3();
+    }
+  }
+
+  &__details {
+    margin-bottom: 24px;
+    &-name {
+      @include heading5();
+      color: var(--lighter-black-color);
+      margin-bottom: 14px;
+      @include md {
+        @include heading4();
+      }
+    }
+    &-hours {
+      @include bodyM();
+      color: var(--black-color);
+      @include md {
+        @include bodyL();
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &-social {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      a {
+        text-decoration: none;
+        @include bodyM();
+        color: var(--black-color);
+        transition: color 0.3s ease-in-out;
+        @include md {
+          @include bodyL();
+        }
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+    }
+  }
+
+  &__img {
+    text-align: center;
+  }
+}
+
+.map {
+  &__inner {
+    overflow: hidden;
+    height: 300px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    -webkit-filter: grayscale(24%);
+    -moz-filter: grayscale(24%);
+    -ms-filter: grayscale(24%);
+    -o-filter: grayscale(24%);
+    filter: grayscale(24%);
+  }
+}

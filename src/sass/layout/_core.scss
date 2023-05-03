@@ -547,3 +547,43 @@
     }
   }
 }
+
+.help {
+  position: relative;
+  padding: 60px 0;
+  @include xl {
+    padding: 80px 0;
+  }
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    &-title {
+      @include heading4();
+      color: var(--lighter-black-color);
+      text-align: center;
+      @include sm {
+        @include heading3();
+      }
+      @include md {
+        @include heading2();
+      }
+      @include lg {
+        @include heading1();
+      }
+    }
+    &-sub {
+      @include heading6();
+      color: var(--primary-color);
+      text-transform: uppercase;
+      @include sm {
+        @include heading5();
+      }
+      @include md {
+        @include heading4();
+      }
+    }
+  }
+}

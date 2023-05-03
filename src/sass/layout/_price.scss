@@ -8,7 +8,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 68px;
+    margin-bottom: 42px;
+    @include xl {
+      margin-bottom: 62px;
+    }
 
     .heading {
       margin-bottom: 14px;
@@ -16,9 +19,16 @@
   }
 
   &__phone {
-    @include heading2();
+    @include heading3();
     color: var(--primary-color);
     text-decoration: none;
+  }
+
+  &__box {
+    margin-bottom: 24px;
+    &:last-of-type {
+      margin: 0;
+    }
   }
 
   &__table {
@@ -27,9 +37,35 @@
   }
 
   &__row {
+    position: relative;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 18px 24px;
+    grid-template-columns: 1fr minmax(24px, 50px);
+    padding: 18px 12px;
+
+    @include sm {
+      grid-template-columns: 1fr minmax(24px, 80px);
+    }
+    @include lg {
+      grid-template-columns: 1fr minmax(24px, 150px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 70px;
+      //   right: 190px;
+      width: 2px;
+      background-color: #f5f5f5;
+
+      @include sm {
+        right: 110px;
+      }
+      @include lg {
+        right: 190px;
+      }
+    }
 
     &--heading {
       @include heading6();
@@ -39,31 +75,22 @@
     &--offert {
       background-color: #f5f5f5;
       color: var(--lighter-black-color);
+      align-items: center;
 
       &:nth-of-type(odd) {
         background-color: #ededed;
+        color: var(--primary-color);
       }
     }
+
+    &-name {
+      @include bodyL();
+    }
+
+    h3 {
+      padding-right: 18px;
+    }
   }
-
-  //   &__row {
-  //     &-heading {
-  //       background-color: var(--primary-color);
-  //       padding: 18px 24px;
-  //       color: white;
-  //       @include heading6();
-  //     }
-
-  //     &-offert {
-  //       padding: 18px 24px;
-  //       background-color: #f5f5f5;
-  //       color: var(--lighter-black-color);
-
-  //       &:nth-of-type(even) {
-  //         background-color: red;
-  //       }
-  //     }
-  //   }
 
   @include md {
     padding: var(--md);
