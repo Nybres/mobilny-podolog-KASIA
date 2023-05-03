@@ -1,0 +1,74 @@
+@use "../utilities/index" as *;
+.prices {
+  position: relative;
+  padding: var(--sm);
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 68px;
+
+    .heading {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__phone {
+    @include heading2();
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  &__table {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 18px 24px;
+
+    &--heading {
+      @include heading6();
+      background-color: var(--primary-color);
+      color: white;
+    }
+    &--offert {
+      background-color: #f5f5f5;
+      color: var(--lighter-black-color);
+
+      &:nth-of-type(odd) {
+        background-color: #ededed;
+      }
+    }
+  }
+
+  //   &__row {
+  //     &-heading {
+  //       background-color: var(--primary-color);
+  //       padding: 18px 24px;
+  //       color: white;
+  //       @include heading6();
+  //     }
+
+  //     &-offert {
+  //       padding: 18px 24px;
+  //       background-color: #f5f5f5;
+  //       color: var(--lighter-black-color);
+
+  //       &:nth-of-type(even) {
+  //         background-color: red;
+  //       }
+  //     }
+  //   }
+
+  @include md {
+    padding: var(--md);
+  }
+  @include lg {
+    padding: var(--lg);
+  }
+}
