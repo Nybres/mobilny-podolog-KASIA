@@ -528,14 +528,29 @@
     }
 
     &-name {
-      @include heading1();
+      @include heading4();
       color: var(--lighter-black-color);
+      margin-bottom: 8px;
+      @include md {
+        @include heading3();
+      }
+      @include lg {
+        @include heading2();
+        margin-bottom: 0px;
+      }
+      @include xl {
+        @include heading1();
+      }
     }
 
     &-menu {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 4px;
+      flex-wrap: wrap;
+      @include md {
+        gap: 10px;
+      }
     }
 
     &-link {

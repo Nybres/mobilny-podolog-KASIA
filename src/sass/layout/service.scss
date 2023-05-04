@@ -1,0 +1,12 @@
+@use "../utilities/index" as *;
+
+.service {
+  position: relative;
+  padding: var(--sm);
+  @include md {
+    padding: var(--md);
+  }
+  @include lg {
+    padding: var(--lg);
+  }
+}

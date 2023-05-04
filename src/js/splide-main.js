@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     gap: 18,
     arrows: false,
-    start: 2,
+    start: 1,
     mediaQuery: "min",
     breakpoints: {
       576: {
