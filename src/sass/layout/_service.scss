@@ -1,0 +1,112 @@
+@use "../utilities/index" as *;
+
+.service {
+  position: relative;
+  padding: 66px 0 0 0;
+
+  @include md {
+    padding: 86px 0 0 0;
+  }
+  @include lg {
+    padding: 106px 0 0 0;
+  }
+
+  &__welcome {
+    @include bodyM();
+    @include lg {
+      @include bodyL();
+      padding-bottom: 32px;
+    }
+    @include xl {
+      @include bodyXl();
+    }
+    color: var(--lighter-black-color);
+    padding-bottom: 24px;
+  }
+
+  &__block {
+    margin-bottom: 32px;
+
+    @include xxl {
+      margin-bottom: 42px;
+    }
+    &:last-of-type {
+      margin: 0;
+    }
+    p + p {
+      margin-top: 16px;
+      @include lg {
+        margin-top: 24px;
+      }
+    }
+    &-title {
+      @include heading4();
+      color: var(--primary-color);
+      padding-bottom: 16px;
+      @include lg {
+        @include heading3();
+      }
+      @include xl {
+        @include heading3();
+      }
+    }
+
+    &-text {
+      @include bodyM();
+      @include lg {
+        @include bodyL();
+      }
+      @include xl {
+        @include bodyXl();
+      }
+      color: var(--lighter-black-color);
+    }
+
+    &-list {
+    }
+    &-list-detail {
+      position: relative;
+      @include bodyM();
+      @include lg {
+        @include bodyL();
+      }
+      @include xl {
+        @include bodyXl();
+      }
+      color: var(--lighter-black-color);
+      padding: 4px 0px;
+      padding-left: 24px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 0px;
+        background-color: var(--primary-color);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__images {
+    &-img + &-img {
+      padding-top: 32px;
+    }
+    &-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+      @include lg {
+        justify-content: flex-end;
+      }
+
+      &--mobile {
+        @include md {
+          display: none;
+        }
+      }
+    }
+  }
+}
