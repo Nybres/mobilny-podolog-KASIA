@@ -17,9 +17,6 @@
       @include bodyL();
       padding-bottom: 32px;
     }
-    @include xl {
-      @include bodyXl();
-    }
     color: var(--lighter-black-color);
     padding-bottom: 24px;
   }
@@ -46,9 +43,6 @@
       @include lg {
         @include heading3();
       }
-      @include xl {
-        @include heading3();
-      }
     }
 
     &-text {
@@ -56,9 +50,9 @@
       @include lg {
         @include bodyL();
       }
-      @include xl {
-        @include bodyXl();
-      }
+      // @include xl {
+      //   @include bodyXl();
+      // }
       color: var(--lighter-black-color);
     }
 
@@ -69,9 +63,6 @@
       @include bodyM();
       @include lg {
         @include bodyL();
-      }
-      @include xl {
-        @include bodyXl();
       }
       color: var(--lighter-black-color);
       padding: 4px 0px;
