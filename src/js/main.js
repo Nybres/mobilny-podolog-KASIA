@@ -149,7 +149,7 @@ if (seoLinks) {
   console.log(currentUrl);
   seoLinks.forEach(link => {
     link.addEventListener("click", e => {
-      window.location = currentUrl.origin + link.getAttribute("data-url");
+      window.location = currentUrl.href + link.getAttribute("data-url");
       // console.log(link.getAttribute("data-url"));
     });
   });
