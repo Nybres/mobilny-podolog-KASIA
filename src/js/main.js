@@ -141,3 +141,33 @@ const scrollUp = params => {
 };
 
 scrollArrow.addEventListener("click", scrollUp);
+
+// Seo lonks
+const seoLinks = document.querySelectorAll(".seo-link");
+if (seoLinks) {
+  const currentUrl = new URL(window.location);
+  console.log(currentUrl);
+  seoLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      window.location = currentUrl.origin + link.getAttribute("data-url");
+      // console.log(link.getAttribute("data-url"));
+    });
+  });
+}
+
+// const seoLinks = document.querySelectorAll(".seo-link");
+// if (seoLinks) {
+//   seoLinks.forEach(element => {
+//     const url = element.dataset.url;
+//     if (url) {
+//       element.addEventListener("click", () => {
+//         window.location.href = url;
+//       });
+//       element.addEventListener("mousedown", e => {
+//         if (e.which === 2) {
+//           window.open(url, "_blank");
+//         }
+//       });
+//     }
+//   });
+// }
