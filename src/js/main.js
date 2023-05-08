@@ -191,12 +191,13 @@ const handleCounter = params => {
   }
 };
 
-const counterSection = document.querySelector(".counter").offsetTop;
+const counterSection = document.querySelector(".counter");
 if (counterSection) {
+  const counterSectionOffset = counterSection.offsetTop;
   let canRunCounter = true;
   window.addEventListener("scroll", e => {
     const windowScroll = window.scrollY || window.pageYOffset;
-    if (counterSection <= windowScroll + 500) {
+    if (counterSectionOffset <= windowScroll + 500) {
       if (canRunCounter) {
         handleCounter();
         canRunCounter = false;
