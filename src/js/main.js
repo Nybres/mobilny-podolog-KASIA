@@ -124,16 +124,16 @@ if (window.innerWidth > 992) {
   //   }, 400);
   // });
 
-  submenuElements.forEach(el => {
-    el.addEventListener("mouseover", () => {
-      if (menuTimer) {
-        clearTimeout(menuTimer);
-      }
-      submenu.classList.add("navigation__submenu--hover");
-      addOverlay();
-      addRotateChevron();
-    });
-  });
+  // submenuElements.forEach(el => {
+  //   el.addEventListener("mouseover", () => {
+  //     if (menuTimer) {
+  //       clearTimeout(menuTimer);
+  //     }
+  //     submenu.classList.add("navigation__submenu--hover");
+  //     addOverlay();
+  //     addRotateChevron();
+  //   });
+  // });
 }
 
 //faq
@@ -214,7 +214,7 @@ if (counterSection) {
   let canRunCounter = true;
   window.addEventListener("scroll", e => {
     const windowScroll = window.scrollY || window.pageYOffset;
-    if (counterSectionOffset <= windowScroll + 500) {
+    if (counterSectionOffset <= windowScroll + 600) {
       if (canRunCounter) {
         handleCounter();
         canRunCounter = false;
