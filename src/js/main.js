@@ -166,3 +166,41 @@ if (seoLinks) {
     }
   });
 }
+
+//counter
+const handleCounter = params => {
+  const counterElements = document.querySelectorAll(".js-counter");
+  if (counterElements) {
+    counterElements.forEach(element => {
+      const maxNumber = element.getAttribute("data-max");
+      let counter = 0;
+      element.textContent = "0";
+      const interval = setInterval(() => {
+        if (counter <= maxNumber) {
+          element.textContent = counter++;
+        } else {
+          clearInterval(interval);
+          const span = document.createElement("span");
+          span.classList.add("counter-plus");
+          element.appendChild(span);
+          element.classList.add("counter-plus");
+          span.textContent = "+";
+        }
+      }, 5);
+    });
+  }
+};
+
+const counterSection = document.querySelector(".counter").offsetTop;
+if (counterSection) {
+  let canRunCounter = true;
+  window.addEventListener("scroll", e => {
+    const windowScroll = window.scrollY || window.pageYOffset;
+    if (counterSection <= windowScroll + 500) {
+      if (canRunCounter) {
+        handleCounter();
+        canRunCounter = false;
+      }
+    }
+  });
+}
