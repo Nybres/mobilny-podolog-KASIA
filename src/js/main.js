@@ -142,32 +142,29 @@ const scrollUp = params => {
 
 scrollArrow.addEventListener("click", scrollUp);
 
-// Seo lonks
+const checkUrl = element => {
+  const url = new URL(window.location);
+  const changedUrl = url.href.split("/").slice(0, -1);
+  const newUrl = changedUrl.join("");
+  return newUrl;
+};
+// http://localhost:3000/index.html
+// Seo links
 const seoLinks = document.querySelectorAll(".seo-link");
 if (seoLinks) {
-  const currentUrl = new URL(window.location);
-  console.log(currentUrl);
+  const currentUrl = checkUrl();
   seoLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      window.location = currentUrl.href + link.getAttribute("data-url");
-      // console.log(link.getAttribute("data-url"));
-    });
+    const linkUrl = link.getAttribute("data-url");
+    if (linkUrl) {
+      link.addEventListener("click", e => {
+        console.log(currentUrl + linkUrl);
+        window.location.href = currentUrl + linkUrl;
+      });
+      link.addEventListener("mousedown", e => {
+        if (e.which === 2) {
+          window.open(currentUrl + linkUrl, "_blank");
+        }
+      });
+    }
   });
 }
-
-// const seoLinks = document.querySelectorAll(".seo-link");
-// if (seoLinks) {
-//   seoLinks.forEach(element => {
-//     const url = element.dataset.url;
-//     if (url) {
-//       element.addEventListener("click", () => {
-//         window.location.href = url;
-//       });
-//       element.addEventListener("mousedown", e => {
-//         if (e.which === 2) {
-//           window.open(url, "_blank");
-//         }
-//       });
-//     }
-//   });
-// }
