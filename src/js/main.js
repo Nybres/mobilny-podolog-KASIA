@@ -144,11 +144,10 @@ scrollArrow.addEventListener("click", scrollUp);
 
 const checkUrl = element => {
   const url = new URL(window.location);
-  const changedUrl = url.href.split("/").slice(0, -1);
-  const newUrl = changedUrl.join("");
+  const lastSlashIndex = url.href.lastIndexOf("/");
+  const newUrl = url.href.substring(0, lastSlashIndex);
   return newUrl;
 };
-// http://localhost:3000/index.html
 // Seo links
 const seoLinks = document.querySelectorAll(".seo-link");
 if (seoLinks) {
@@ -157,7 +156,6 @@ if (seoLinks) {
     const linkUrl = link.getAttribute("data-url");
     if (linkUrl) {
       link.addEventListener("click", e => {
-        console.log(currentUrl + linkUrl);
         window.location.href = currentUrl + linkUrl;
       });
       link.addEventListener("mousedown", e => {
