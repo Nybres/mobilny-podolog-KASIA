@@ -52,10 +52,10 @@ menuBackArrow.addEventListener("click", () => {
 });
 
 if (window.innerWidth > 992) {
-  const submenuInner = document.querySelector(".navigation__submenu-inner");
-  const submenuElements = document.querySelectorAll(
-    ".navigation__submenu-item"
-  );
+  // const submenuInner = document.querySelector(".navigation__submenu-inner");
+  // const submenuElements = document.querySelectorAll(
+  //   ".navigation__submenu-item"
+  // );
   let menuTimer = !1;
 
   menuItemArrow.addEventListener("mouseover", () => {
@@ -75,7 +75,7 @@ if (window.innerWidth > 992) {
     }, 400);
   });
 
-  submenuInner.addEventListener("mouseout", e => {
+  submenu.addEventListener("mouseover", () => {
     if (menuTimer) {
       clearTimeout(menuTimer);
     }
@@ -84,13 +84,30 @@ if (window.innerWidth > 992) {
     addRotateChevron();
   });
 
-  submenuInner.addEventListener("mouseout", e => {
+  submenu.addEventListener("mouseout", () => {
     menuTimer = setTimeout(() => {
       submenu.classList.remove("navigation__submenu--hover");
       removeOverlay();
       removeRotateChevron();
     }, 400);
   });
+
+  // submenuInner.addEventListener("mouseout", e => {
+  //   if (menuTimer) {
+  //     clearTimeout(menuTimer);
+  //   }
+  //   submenu.classList.add("navigation__submenu--hover");
+  //   addOverlay();
+  //   addRotateChevron();
+  // });
+
+  // submenuInner.addEventListener("mouseout", e => {
+  //   menuTimer = setTimeout(() => {
+  //     submenu.classList.remove("navigation__submenu--hover");
+  //     removeOverlay();
+  //     removeRotateChevron();
+  //   }, 400);
+  // });
 
   // subemnuNav.addEventListener("mouseout", e => {
   //   if (menuTimer) {
